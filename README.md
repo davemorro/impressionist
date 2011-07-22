@@ -110,7 +110,14 @@ Usage
 
         @widget.impressionist_count(:filter=>:all)
 
+9. Get the most popular records by model. This will return all the widgets by popularity along with the impression_count for each widget
+
+        Widget.most_popular_by_impression_count
+        Widget.most_popular_by_impression_count(:start_date=>"2011-01-01",:end_date=>"2011-01-05")
+        Widget.most_popular_by_impression_count(:start_date=>"2011-01-01") #specify start date only, end date = now
+
 Logging impressions for authenticated users happens automatically.  If you have a current_user helper or use @current_user in your before_filter to set your authenticated user, current_user.id will be written to the user_id field in the impressions table.
+
 
 
 Development Roadmap

@@ -5,7 +5,7 @@ module ImpressionistController
     def impressionist(opts={})
       before_filter { |c| c.impressionist_subapp_filter opts[:actions] }
     end
-  end
+  end 
   
   module InstanceMethods
     def self.included(base)
